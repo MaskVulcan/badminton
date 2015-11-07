@@ -19,7 +19,7 @@ var cookieParser = require('cookie-parser');
 var flash = require('connect-flash');
 var session = require('express-session');
 
-app.set('port', 80);
+app.set('port', (process.env.PORT || 5000));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(favicon(__dirname + '/public/img/favicon.png'));
@@ -36,7 +36,7 @@ app.use(session({
   store: require('./models/db').getStore()
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cCheck.log);
+//app.use(cCheck.log);
 app.use(cCheck.error);
 
 //===========================================================================//

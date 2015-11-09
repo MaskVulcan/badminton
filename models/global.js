@@ -98,6 +98,8 @@ exports.getTimeForIndApply = function (year) {
 
 var team2014BeginTime = new Date(2014, 11-1, 13, 13, 0, 0);
 var team2014EndTime = new Date(2014, 11-1, 30, 22, 0, 0);
+var team2015BeginTime = new Date(2015, 11-1, 7, 13, 0, 0);
+var team2015EndTime = new Date(2015, 11-1, 22, 22, 0, 0);
 
 exports.checkTimeForTeamApply = function (year) {
   var now = new Date();
@@ -106,11 +108,18 @@ exports.checkTimeForTeamApply = function (year) {
   } else {
     return false;
   }
+ if (year == 2015) {
+    return (team2015BeginTime <= now && now <= team2015EndTime);
+  } else {
+    return false;
 };
 
 exports.getTimeForTeamApply = function (year) {
   if (year == 2014) {
     return getTime(team2014BeginTime, team2014EndTime);
+  }
+  if (year == 2015) {
+    return getTime(team2015BeginTime, team2015EndTime);
   }
 };
 

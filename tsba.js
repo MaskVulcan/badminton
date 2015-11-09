@@ -19,7 +19,7 @@ var cookieParser = require('cookie-parser');
 var flash = require('connect-flash');
 var session = require('express-session');
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 80));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(favicon(__dirname + '/public/img/favicon.png'));
@@ -132,18 +132,18 @@ app.get('/team/:year/admin', [
 ]);
 
 app.get('/team/:year/list', [
-  cCheck.checkYear(2013, 2015),
+  cCheck.checkYear(2013, 2014),
   cTeam.userListGet,
 ]);
 
 app.get('/team/:year/Results/:type', [
-  cCheck.checkYear(2013, 2015),
+  cCheck.checkYear(2013, 2014),
   cCheck.checkTeamType,
   cTeam.resultsGet,
 ]);
 
 app.get('/team/:year/Details/:type/:teamId/:left/:right', [
-  cCheck.checkYear(2013, 2015),
+  cCheck.checkYear(2013, 2014),
   cTeam.resultsGetDetails,
 ]);
 

@@ -105,13 +105,12 @@ exports.checkTimeForTeamApply = function (year) {
   var now = new Date();
   if (year == 2014) {
     return (team2014BeginTime <= now && now <= team2014EndTime);
-  } else {
-    return false;
   }
- if (year == 2015) {
+  if (year == 2015) {
     return (team2015BeginTime <= now && now <= team2015EndTime);
   } else {
     return false;
+  }
 };
 
 exports.getTimeForTeamApply = function (year) {

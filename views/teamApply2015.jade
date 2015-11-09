@@ -48,3 +48,10 @@ block content
                   h4= departments[i].id
               td
                 p
+                  h4
+                    a(href="/team/2014/Apply/" + departments[i].id)
+                      = departments[i].name
+              td
+                p
+                  h4= departments[i].leader
+    hr

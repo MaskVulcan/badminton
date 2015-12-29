@@ -141,7 +141,7 @@ app.get('/team/:year/Results/:type', [
 ]);
 
 app.get('/team/:year/Details/:type/:teamId/:left/:right', [
-  cCheck.checkYear(2013, 2014),
+  cCheck.checkYear(2013, 2015),
   cTeam.resultsGetDetails,
 ]);
 

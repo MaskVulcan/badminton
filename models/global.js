@@ -28,7 +28,7 @@ exports.maxDepartmentid = 38;
 
 //===========================================================================//
 
-exports.id = 4;
+exports.id = 5;
 exports.maxTime = 7;
 exports.maxPeople = 10;
 exports.maxSpace = 4;
@@ -36,8 +36,8 @@ exports.beginHour = 10;
 exports.beginMinute = 15;
 exports.period = 15;
 
-var applicationBeginTime = new Date(2015, 9-1, 21, 13, 0, 0);
-var applicationEndTime = new Date(2015, 9-1, 26, 22, 0, 0);
+var applicationBeginTime = new Date(2016, 3-1, 1, 13, 0, 0);
+var applicationEndTime = new Date(2016, 3-1, 5, 22, 0, 0);
 
 exports.checkTimeForApplication = function () {
   var now = new Date();

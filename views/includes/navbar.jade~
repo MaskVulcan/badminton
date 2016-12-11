@@ -63,39 +63,7 @@ nav(class='navbar navbar-default navbar-fixed-top', role='navigation')
               span(class="glyphicon glyphicon-flag")
               |  团体赛
           ul(class="dropdown-menu",role="menu",aria-labelledby="dteam")
-            li
-              a(class='trigger right-caret')
-                h4
-                  span(class="glyphicon glyphicon-flag")
-                  |  2016团体赛&nbsp;&nbsp;&nbsp;
-                  span(class="glyphicon glyphicon-chevron-right")
-              ul(class="dropdown-menu sub-menu")
-                li
-                  a(href="/team/2016/list")
-                    h5
-                      span(class="glyphicon glyphicon-info-sign")
-                      |  2016团体赛参赛选手名单
-                li
-                  a(href="/team/2016/Results/1")
-                    h5
-                      span(class="glyphicon glyphicon-info-sign")
-                      |  2016团体赛甲组小组赛
-                li
-                  a(href="/team/2016/Results/2")
-                    h5
-                      span(class="glyphicon glyphicon-info-sign")
-                      |  2016团体赛乙组小组赛
-                li
-                  a(href="/team/2016/Apply")
-                    h5
-                      span(class="glyphicon glyphicon-pencil")
-                      |  2016团体赛报名
-                li(class="divider")
-                li
-                  a(href='/team/2016/admin')
-                    h5
-                      span(class="glyphicon glyphicon-user")
-                      |  管理员
+             
             li
               a(class='trigger right-caret')
                 h4

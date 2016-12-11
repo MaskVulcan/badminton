@@ -24,7 +24,7 @@ var getTime = function (beginTime, endTime) {
 
 //===========================================================================//
 
-exports.maxDepartmentid = 38;
+exports.maxDepartmentid = 40;
 
 //===========================================================================//
 
@@ -100,11 +100,16 @@ var team2014BeginTime = new Date(2014, 11-1, 13, 13, 0, 0);
 var team2014EndTime = new Date(2014, 11-1, 30, 22, 0, 0);
 var team2015BeginTime = new Date(2015, 11-1, 7, 13, 0, 0);
 var team2015EndTime = new Date(2015, 11-1, 14, 22, 0, 0);
+var team2016BeginTime = new Date(2016, 12-1, 11, 13, 0, 0);
+var team2016EndTime = new Date(2016, 12-1, 18, 22, 0, 0);
 
 exports.checkTimeForTeamApply = function (year) {
   var now = new Date();
   if (year == 2014) {
     return (team2014BeginTime <= now && now <= team2014EndTime);
+  }
+  if (year == 2016) {
+    return (team2016BeginTime <= now && now <= team2016EndTime);
   }
   if (year == 2015) {
     return (team2015BeginTime <= now && now <= team2015EndTime);
@@ -119,6 +124,9 @@ exports.getTimeForTeamApply = function (year) {
   }
   if (year == 2015) {
     return getTime(team2015BeginTime, team2015EndTime);
+  }
+  if (year == 2016) {
+      return getTime(team2016BeginTime, team2016EndTime);
   }
 };
 
